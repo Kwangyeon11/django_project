@@ -19,7 +19,7 @@ class UserCreateDoneTV(TemplateView):
     template_name = 'registration/register_done.html'
 
 class OwnerOnlyMixin(AccessMixin):
-    reias_exception = True
+    raise_exception = True
     permission_denied_message = "Owner only can update/delete the object"
 
     def dispatch(self, request, *args, **kwargs):
