@@ -45,7 +45,7 @@ class PostDV(DetailView):
         context = super().get_context_data(**kwargs)
         context['disqus_short'] = f"{settings.DISQUS_SHORTNAME}"
         context['disqus_id'] = f"post-{self.object.id}-{self.object.slug}"
-        context['disqus.url'] = f"{settings.DISQUS_MY_DOMAIN}{self.object.get_absolute_url()}"
+        context['disqus_url'] = f"{settings.DISQUS_MY_DOMAIN}{self.object.get_absolute_url()}"
         context['disqus_title'] = f"{self.object.slug}"
         return context
 
